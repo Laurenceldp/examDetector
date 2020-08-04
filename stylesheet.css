@@ -1,0 +1,52 @@
+.img-thumbnail {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+      }
+      .img-thumbnail{
+        height:200px!important;
+      }
+html, 
+body,
+header,
+#intro{
+    height: 100%;
+}
+#body{
+  background-color:rgb(250, 207, 207);
+}
+
+
+#formgroup{
+    margin-top: 50px;
+}
+.btn-outline-secondary{
+  color:rgb(102, 47, 230);
+}
+
+.fab{
+  color: rgb(102, 47, 230);
+}
+.card-body{
+  padding: 20px;
+  margin-top: 30px;
+}
+.navbar-custom, footer {
+  background-color: rgb(102, 47, 230);
+}
+.btn-secondary{
+  background-color:  rgb(102, 47, 230);
+}
+#container {
+  margin: 0px auto;
+  width: 200px;
+  height: 150px;
+  border: 2px rgb(233, 228, 243);
+}
+
+#videoElement {
+  width: 200px;
+  height: 150px;
+  background-color: rgb(182, 157, 157);
+}
+
