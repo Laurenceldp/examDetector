@@ -1,4 +1,4 @@
-# examdetector
+# examDetector
 MSc Software Dissertation project 
 
 Problem Specification / Project Plan: Academic dishonesty in online examinations
