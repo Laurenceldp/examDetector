@@ -64,15 +64,13 @@ As an invigilator I want to be able to invigilate large groups of candidates 	So
 As an invigilator I want to ensure exam integrity even when exams are open book or essay-based	Software adjusts for exams using open books or essay questions
 
 
-
- 
- 
 Project content: 
 To develop the project, it is anticipated that a mock platform will initially be created to test if a candidate/user is looking on screen or off screen. This will be written in JavaScript and make use of a Flask HTTPS local server written with python. This platform will be expanded to detail specific gaze patterns or heat maps, identifying trends in data sets that would allow for an AI program to be able to evaluate if unusual behaviour is taking place. 
 It is expected that initial data used will come from the WebGazer study by a team at Brown University (Group, 2020). This will be built on by data collected by the researcher focusing on 2 sets of behaviour within an exam environment: not cheating and intentionally cheating. It is hoped through this data trends can be read, and the project will progress to be able to identify the traits in academic dishonesty. Further data could be needed and will be assessed as the project continues. 
 It is the intention at the end of the project that a demo product will be available, alongside a video demo and dissertation paper. 
-The project requires the researcher to acquire new skill sets, including a level of competence in new coding languages and areas of cognitive science, statistics, and AI. As such, it will be managed as an agile project, creating small working demos for each iteration. This may mean that technology, data requirements and research elements could change throughout the project. A draft timeframe has been included below in the form of a Gantt chart to advise on a possible timeframe. 
- 
+The project requires the researcher to acquire new skill sets, including a level of competence in new coding languages and areas of cognitive science, statistics, and AI. As such, it will be managed as an agile project, creating small working demos for each iteration. This may mean that technology, data requirements and research elements could change throughout the project. 
+
+
 Bibliography
 Accountants, A. o. (2017). Cheating in exams - the consequences . London: Association of International Certified Professional Accountants.
 Dyer, J. M., Pettyjohn, H. C., & Saladin, S. (2020). Academic Dishonesty and Testing:How Student Beliefs and Test Settings Impact Decisions to Cheat. Journal of the National College Testing Association.
