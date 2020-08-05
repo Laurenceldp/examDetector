@@ -146,6 +146,8 @@ const videoFeed = document.querySelector('stream');
                                         // TODO  storingData(midEye[0]);
                                     }
                                 }
+                            } else if (predictions.length == 0) {
+                                    console.log ('no faces detected');
                             }
                         }
                     }
