@@ -28,6 +28,8 @@ if (!isset($_SESSION['clientloggedin'])) {
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.0.3"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script src="js/volume-meter.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS-->
     <link rel="stylesheet" href="css/stylesheet.css">
@@ -44,7 +46,7 @@ if (!isset($_SESSION['clientloggedin'])) {
 <!--TODO build brain.js model to train from data -->
 
 <body>
-    <script>
+    <!--     <script>
         //timer function to get current timestamp
         let pageLoadtime;
         let endPageTime;
@@ -63,7 +65,7 @@ if (!isset($_SESSION['clientloggedin'])) {
         }
         onload = (pageLoadtime = dateTime());
         console.log(dateTime());
-    </script>
+    </script> -->
 
     <!--direct css for box and video (issues as part of css file - Bootstrap compatibility? -->
     <style>
@@ -105,43 +107,43 @@ if (!isset($_SESSION['clientloggedin'])) {
                     <div class="card-body">
                         <div class='col-sm'>
                             <video autoplay="true" id="videoElement">
-                                <script>
-                                    let videoStartTime;
-                                    //starts video stream
-                                    var video = document.querySelector("#videoElement");
-                                    if (navigator.mediaDevices.getUserMedia) {
-                                        navigator.mediaDevices.getUserMedia({
-                                                video: true
-                                            })
-                                            .then(function(stream) {
-                                                video.srcObject = stream;
-                                                setInterval(function() {
-                                                    objects();
-                                                }, 4000);
-                                            })
-                                            .catch(function(err0r) {
-                                                console.log("Video stream error");
-                                            });
-                                    }
-                                    //function to check and predict if there are foregin objects in stream - phones, books, TODO headphones
-                                    //TODO - train model for better detection
-                                    //TODO - return image and alert data to database
-                                    async function objects() {
-                                        cocoSsd.load().then(model => {
-                                            // detect objects in the image.
-                                            model.detect(video).then(predictions => {
-                                                console.log('Predictions: ', predictions);
-                                            });
-                                        });
+<!-- 
+                                let videoStartTime;
+                                //starts video stream
+                                var video = document.querySelector("#videoElement");
+                                if (navigator.mediaDevices.getUserMedia) {
+                                navigator.mediaDevices.getUserMedia({
+                                video: true
+                                })
+                                .then(function(stream) {
+                                video.srcObject = stream;
+                                setInterval(function() {
+                                objects();
+                                }, 4000);
+                                })
+                                .catch(function(err0r) {
+                                console.log("Video stream error");
+                                });
+                                }
+                                //function to check and predict if there are foregin objects in stream - phones, books, TODO headphones
+                                //TODO - train model for better detection
+                                //TODO - return image and alert data to database
+                                async function objects() {
+                                cocoSsd.load().then(model => {
+                                // detect objects in the image.
+                                model.detect(video).then(predictions => {
+                                console.log('Predictions: ', predictions);
+                                });
+                                });
 
-                                    }
-                                </script>
+                                }
+                                </script> -->
                             </video>
                         </div>
                     </div>
                 </div>
 
-                <script>
+                <!-- <script>
                     const videoFeed = document.querySelector('stream');
                     let model;
                     // checking the video has loaded in, loading face model and setting 3 sec interval to check movements 
@@ -293,10 +295,10 @@ if (!isset($_SESSION['clientloggedin'])) {
                             }
                         }
                     }
-                </script>
+                </script> -->
 
 
-                <script>
+                <!-- <script>
                     let visibleChangeCount = 0;
                     let notVisibleChangeCount = 0;
                     let visibleTimeCount;
@@ -352,9 +354,9 @@ if (!isset($_SESSION['clientloggedin'])) {
                     //function timeCalc(num1, num2){
                     //    return num1-num2;
                     // }
-                </script>
+                </script> -->
 
-                <script>
+               <!--  <script>
                     //checking the time
                     let startTime, endTime, seconds = 0;
 
@@ -373,7 +375,7 @@ if (!isset($_SESSION['clientloggedin'])) {
                         return seconds;
                     }
                 </script>
-
+ -->
                 <!-- TODO get permission at start of session for all screen access, run 
                 in background, take screengrab without click if alerts triggered
                 <script src=js/screenGrab.js> </script> </html> -->
@@ -449,7 +451,11 @@ if (!isset($_SESSION['clientloggedin'])) {
                             </div>
                         </div>
                     </footer>
-
+                    <script src="js/timer.js"></script>
+<script src="js/video.js"></script>
+<script src="js/videoChecks.js"></script>
+<script src="js/visibilityChecks.js"></script>
+<script src="js/checkTime.js"></script>
 
 </body>
 
