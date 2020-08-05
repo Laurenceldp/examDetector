@@ -38,8 +38,8 @@ const videoFeed = document.querySelector('stream');
                     async function main() {
                         const videoElem = document.querySelector('#videoElement');
                         const predictions = await model.estimateFaces(videoElem);
-                        if (typeof model.estimateFaces(videoElem) == 'undefined') {
-                            console.log('no face present');
+                        if (predictions.length == 0) {
+                            console.log ('no faces detected');
                         } else {
                             const ntip = predictions[0]['annotations']['noseTip'];
                             const lCheek = predictions[0]['annotations']['leftCheek'];
@@ -146,8 +146,7 @@ const videoFeed = document.querySelector('stream');
                                         // TODO  storingData(midEye[0]);
                                     }
                                 }
-                            } else if (predictions.length == 0) {
-                                    console.log ('no faces detected');
-                            }
+                            } 
                         }
                     }
+                
